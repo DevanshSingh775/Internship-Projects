@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully functional calculator with clean UI">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="calculator-container">
+        <h1 class="sr-only">Calculator Application</h1>
+        
+        <div class="calculator" role="application" aria-label="Calculator">
+            <!-- Calculator Display -->
+            <div class="display" aria-live="polite">
+                <div id="previous-operand" class="previous-operand" aria-label="Previous calculation"></div>
+                <div id="current-operand" class="current-operand" aria-label="Current input">0</div>
+            </div>
+            
+            <!-- Calculator Keypad -->
+            <div class="calculator-keys">
+                <!-- First Row -->
+                <button type="button" class="span-two" data-action="clear" aria-label="All clear">
+                    AC
+                </button>
+                <button type="button" data-action="delete" aria-label="Delete last digit">
+                    DEL
+                </button>
+                <button type="button" data-operation="÷" aria-label="Divide">
+                    ÷
+                </button>
+                
+                <!-- Second Row -->
+                <button type="button" data-number="7" aria-label="Seven">
+                    7
+                </button>
+                <button type="button" data-number="8" aria-label="Eight">
+                    8
+                </button>
+                <button type="button" data-number="9" aria-label="Nine">
+                    9
+                </button>
+                <button type="button" data-operation="×" aria-label="Multiply">
+                    ×
+                </button>
+                
+                <!-- Third Row -->
+                <button type="button" data-number="4" aria-label="Four">
+                    4
+                </button>
+                <button type="button" data-number="5" aria-label="Five">
+                    5
+                </button>
+                <button type="button" data-number="6" aria-label="Six">
+                    6
+                </button>
+                <button type="button" data-operation="-" aria-label="Subtract">
+                    -
+                </button>
+                
+                <!-- Fourth Row -->
+                <button type="button" data-number="1" aria-label="One">
+                    1
+                </button>
+                <button type="button" data-number="2" aria-label="Two">
+                    2
+                </button>
+                <button type="button" data-number="3" aria-label="Three">
+                    3
+                </button>
+                <button type="button" data-operation="+" aria-label="Add">
+                    +
+                </button>
+                
+                <!-- Fifth Row -->
+                <button type="button" data-number="0" aria-label="Zero">
+                    0
+                </button>
+                <button type="button" data-number="." aria-label="Decimal point">
+                    .
+                </button>
+                <button type="button" class="span-two" data-action="calculate" aria-label="Equals">
+                    =
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
